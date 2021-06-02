@@ -4,6 +4,12 @@ import Layout from "../views/Layout"
 Vue.use(VueRouter);
 const routes = [
   {
+    path: "/test",
+    name: "test",
+    hidden: true,
+    component: () => import("../views/a_test/index.vue")
+  },
+  {
     path: "/",
     redirect: "Login",
     hidden: true

@@ -1,3 +1,5 @@
+// 我好困啊，怎么github学习都要这么久，谁叫自己回来没有两小时内。。。
+
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
@@ -18,5 +20,16 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
+  // 
+  /*1.如果使用的是：runtime-compiler:
+  tempalte->ast->render->vitual dom->ui
+  
+  render:function(h){
+    return h(App)
+ }*/
+
+  /**2.如果使用的是runtime-only----------结论1：性能更高
+   * render->vdom->ui
+   */
   render: h => h(App)
 }).$mount("#app");
